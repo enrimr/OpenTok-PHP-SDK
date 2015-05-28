@@ -61,6 +61,16 @@ $app->get('/', function () use ($app) {
 });
 
 $app->get('/game/:room', function ($room) use ($app) {
+    // If a sessionId has already been created, retrieve it from the cache
+    $sessionId = $app->cache->getOrCreate('sessionId', array(), function() use ($app) {
+        // If the sessionId hasn't been created, create it now and store it
+        $session = $app->opentok->createSession();
+        return $session->getSessionId();
+    });
+
+    // Generate a fresh token for this client
+    $token = $app->opentok->generateToken($sessionId);
+    
     $app->render('game.php', array(
         'apiKey' => $app->apiKey,
         'sessionId' => $sessionId,

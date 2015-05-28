@@ -1,9 +1,19 @@
-#publisher, #publisher video{
+#publisher {
+	width: 100% !important;
+	height: 40% !important;
+} 
+
+#publisher video{
 	width: 100% !important;
 }
 
 
-#subscribers, #subscribers video{
+#subscribers {
+	width: 100% !important;
+	height: 40% !important;
+} 
+
+#subscribers video{
 	width: 100% !important;
 }
 

@@ -12,4 +12,4 @@ SET API_SECRET=1019c9469125d71b94a79f61d888a3beb652ba5b
 
 RD /q /s cache
 
-php.exe -S localhost:8080 -t web web/index.php
+php.exe -S 0.0.0.0:8080 -t web web/index.php
