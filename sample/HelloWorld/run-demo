@@ -2,8 +2,8 @@
 
 if [ -z "$API_KEY" ] || [ -z "$API_SECRET" ]
 then
-  export API_KEY=
-  export API_SECRET=
+  export API_KEY=45239802
+  export API_SECRET=1019c9469125d71b94a79f61d888a3beb652ba5b
 fi
 
 if [ -d "cache" ]

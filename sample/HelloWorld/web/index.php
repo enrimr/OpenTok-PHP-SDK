@@ -60,4 +60,13 @@ $app->get('/', function () use ($app) {
     ));
 });
 
+$app->get('/game/:room', function ($room) use ($app) {
+    $app->render('game.php', array(
+        'apiKey' => $app->apiKey,
+        'sessionId' => $sessionId,
+        'token' => $token,
+        'room' => $room
+    ));
+});
+
 $app->run();
